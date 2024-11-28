@@ -104,18 +104,17 @@ main {
 
 /* Profile Section */
 .profile {
-    text-align: center; /* Center-align the profile container */
+    text-align: center;
     margin-bottom: 2em;
 }
 
 .profile img {
-    width: 120px; /* Explicitly define smaller image size */
-    height: 120px;
-    max-width: 10%; /* Prevent scaling beyond natural size */
-    border-radius: 50%; /* Circular image */
-    margin: 0 auto; /* Center-align the image */
-    display: block; /* Block display for proper centering */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width: 120px !important; /* Force size */
+    height: 120px !important; /* Force size */
+    max-width: 100%; /* Prevent overflow */
+    border-radius: 50%; /* Circular */
+    margin: 0 auto;
+    display: block; /* Ensure centering works */
 }
 
 .profile h1 {
