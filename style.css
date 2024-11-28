@@ -109,8 +109,8 @@ main {
 }
 
 .profile img {
-    width: 120px; /* Explicitly define smaller image size */
-    height: 120px;
+    width: 10px; /* Explicitly define smaller image size */
+    height: 10px;
     border-radius: 50%; /* Circular image */
     margin: 0 auto; /* Center-align the image */
     display: block; /* Block display for proper centering */
