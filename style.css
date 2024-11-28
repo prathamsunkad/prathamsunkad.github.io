@@ -73,170 +73,101 @@ footer .social a:hover {
 }  */
 
 
-/* General Reset */
-body, h1, h2, h3, p, ul, a {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-    text-decoration: none;
-}
-
-body {
-    background-color: #f4f4f9;
-    color: #333;
-    line-height: 1.6;
-    overflow-x: hidden;
-}
-
-/* Header */
-header {
-    background-color: #003366;
-    color: white;
-    text-align: center;
-    padding: 1em 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 10;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-header h1 {
-    font-size: 1.8em;
-    cursor: pointer;
-}
-
-header nav {
-    margin-top: 0.5em;
-}
-
-header nav a {
-    color: white;
-    margin: 0 1em;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-header nav a:hover {
-    color: #ffcc00;
-}
-
-/* Main Content */
+/* Main Content with Split Layout */
 main {
-    padding: 7em 2em 2em; /* Push down to clear fixed header */
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2em;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 7em 2em 2em; /* Clears the fixed header */
+    gap: 1em;
 }
 
-.profile {
-    display: flex;
-    align-items: center;
-    gap: 2em;
-    flex-wrap: wrap;
+/* Left Section */
+.left-side {
+    flex: 1;
+    max-width: 33%;
+    text-align: center;
+    padding: 1em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+.left-side img {
     width: 80%;
-    max-width: 1200px;
-}
-
-.profile img {
+    height: auto;
+    max-width: 250px;
     border-radius: 50%;
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
+    margin-bottom: 1em;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.bio {
-    flex: 1;
-    max-width: 600px;
-}
-
-.bio h2 {
-    font-size: 1.5em;
+.left-side h1 {
+    font-size: 1.6em;
     margin-bottom: 0.5em;
 }
 
-.bio p {
-    font-size: 1.1em;
-    margin-bottom: 1em;
-    text-align: justify;
-}
-
-.degree {
-    font-weight: bold;
+.left-side p {
     font-size: 1.2em;
-    margin-top: 0.5em;
+    margin: 0.3em 0;
+    color: #555;
 }
 
-.degree a {
+/* Right Section */
+.right-side {
+    flex: 2;
+    max-width: 66%;
+    padding: 1em;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Biography */
+.right-side .biography {
+    margin-bottom: 1em;
+}
+
+.right-side .biography h2 {
+    font-size: 1.5em;
     color: #003366;
-    font-weight: bold;
-    transition: color 0.3s;
+    margin-bottom: 0.5em;
 }
 
-.degree a:hover {
-    color: #ff6600;
+.right-side .biography p {
+    font-size: 1.1em;
+    text-align: justify;
+    margin-bottom: 1em;
 }
 
 /* Interests and Education */
-#interests, #education {
-    width: 80%;
-    max-width: 1200px;
-    margin: 0 auto;
+.interests-education {
+    display: flex;
+    gap: 2%;
+    margin-bottom: 1em;
 }
 
-#interests ul, #education ul {
-    list-style-type: disc;
-    padding-left: 2em;
-    font-size: 1.1em;
+.interests, .education {
+    flex: 1;
+    padding: 1em;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
-#interests h2, #education h2 {
-    font-size: 1.4em;
-    margin-bottom: 0.5em;
+.interests h3, .education h3 {
+    font-size: 1.2em;
     color: #003366;
-    text-align: left;
-}
-
-/* Social Links */
-.social {
-    margin: 1em 0;
-    display: flex;
-    justify-content: center;
-    gap: 1.5em;
-}
-
-.social a {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    background-color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.social a img {
-    width: 20px;
-    height: 20px;
-}
-
-.social a:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Footer */
-footer {
-    background-color: #003366;
-    color: white;
+    margin-bottom: 0.5em;
     text-align: center;
-    padding: 1em 0;
-    margin-top: 2em;
+}
+
+.interests ul, .education ul {
+    list-style: none;
+    padding-left: 0;
+    font-size: 1em;
+    margin: 0;
+    text-align: center;
 }
 
 /* Publications Section */
@@ -245,6 +176,10 @@ footer {
     padding: 2em;
     background-color: #e8f0f8;
     box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    max-height: 400px; /* Adjust for scrollable content */
+    margin-top: 2em;
+    border-radius: 8px;
 }
 
 #publications h2 {
@@ -278,20 +213,18 @@ footer {
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
-    .profile {
+    main {
         flex-direction: column;
         align-items: center;
     }
 
-    .bio {
-        text-align: center;
+    .left-side, .right-side {
+        max-width: 100%;
+        width: 100%;
     }
 
-    .social {
-        flex-wrap: wrap;
-    }
-
-    #interests ul, #education ul {
-        padding-left: 1em;
+    .interests-education {
+        flex-direction: column;
+        gap: 1em;
     }
 }
