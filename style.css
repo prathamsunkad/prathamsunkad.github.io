@@ -80,8 +80,8 @@ body {
     padding: 0;
     background-color: #f5f5f5;
     color: black;
-    line-height: 1.6;
-    font-size: 1.2em; /* Slightly larger base font for content */
+    line-height: 1.8; /* Increased for readability */
+    font-size: 1.3em; /* Larger base font */
 }
 
 /* Header */
@@ -90,7 +90,8 @@ header {
     padding: 1em;
     background-color: #333;
     color: white;
-    font-size: 1.3em; /* Slightly larger header font */
+    font-size: 2em; /* Larger font for "Portfolio" */
+    font-weight: bold;
 }
 
 /* Main Content */
@@ -98,89 +99,82 @@ main {
     width: 90%;
     margin: 0 auto;
     padding: 2em 0;
+    text-align: left; /* Left-align all content */
 }
 
 /* Profile Section */
 .profile {
-    text-align: center;
-    margin-bottom: 1.5em; /* Reduced spacing */
+    text-align: center; /* Center-align the profile container */
+    margin-bottom: 2em;
 }
 
 .profile img {
-    width: 30px; /* Keep smaller size */
-    height: 30px; /* Keep smaller size */
-    border-radius: 50%;
-    margin-bottom: 0.5em; /* Reduced margin below image */
+    width: 120px; /* Explicitly define smaller image size */
+    height: 120px;
+    border-radius: 50%; /* Circular image */
+    margin: 0 auto; /* Center-align the image */
+    display: block; /* Block display for proper centering */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
-.profile h1, .profile p {
-    margin: 0.2em 0; /* Reduced spacing for compactness */
-    font-size: 1.4em; /* Slightly larger text to balance the smaller image */
+.profile h1 {
+    font-size: 2em; /* Slightly larger font for name */
+    margin: 0.5em 0;
+}
+
+.profile p {
+    font-size: 1.2em; /* Consistent font size */
+    margin: 0.3em 0;
 }
 
 /* Biography Section */
 .biography {
-    text-align: center;
-    margin-bottom: 1.5em; /* Reduced spacing */
+    margin-bottom: 2em;
 }
 
 .biography h2 {
-    font-size: 1.5em; /* Section heading font size */
+    font-size: 1.8em; /* Larger section heading */
     margin-bottom: 0.5em;
 }
 
 .biography p {
-    font-size: 1.2em; /* Adjusted for readability */
-    text-align: justify;
+    font-size: 1.3em; /* Larger content font */
+    text-align: justify; /* Justified for better readability */
 }
 
 /* Interests Section */
 .interests {
-    margin-bottom: 1.5em; /* Reduced spacing */
-    text-align: center;
+    margin-bottom: 2em;
 }
 
 .interests h2 {
-    font-size: 1.5em;
+    font-size: 1.8em;
     margin-bottom: 0.5em;
 }
 
-.interests ul {
-    list-style: none;
-    padding: 0;
-}
-
 .interests ul li {
+    font-size: 1.3em; /* Larger font size for list items */
     margin: 0.5em 0;
-    font-size: 1.2em; /* Increased list item font size */
 }
 
 /* Education Section */
 .education {
-    margin-bottom: 1.5em; /* Reduced spacing */
-    text-align: center;
+    margin-bottom: 2em;
 }
 
 .education h2 {
-    font-size: 1.5em;
+    font-size: 1.8em;
     margin-bottom: 0.5em;
 }
 
-.education ul {
-    list-style: none;
-    padding: 0;
-}
-
 .education ul li {
+    font-size: 1.3em; /* Larger font size */
     margin: 0.5em 0;
-    font-size: 1.2em; /* Balanced font size */
 }
 
 /* Publications Section */
 #publications {
-    margin-bottom: 1.5em; /* Reduced spacing */
-    text-align: center;
+    margin-bottom: 2em;
     padding: 1em;
     background-color: white;
     border-radius: 8px;
@@ -188,18 +182,13 @@ main {
 }
 
 #publications h2 {
-    font-size: 1.5em;
+    font-size: 1.8em;
     margin-bottom: 0.5em;
 }
 
-#publications ul {
-    list-style: none;
-    padding: 0;
-}
-
 #publications ul li {
+    font-size: 1.3em;
     margin: 1em 0;
-    font-size: 1.2em; /* Balanced size */
 }
 
 #publications ul li a {
@@ -218,7 +207,7 @@ footer {
     padding: 1em;
     background-color: #333;
     color: white;
-    font-size: 1.1em;
+    font-size: 1.2em;
 }
 
 /* Responsive Design */
@@ -228,18 +217,18 @@ footer {
     }
 
     .profile img {
-        width: 25px; /* Even smaller on mobile */
-        height: 25px;
+        width: 80px; /* Smaller on mobile */
+        height: 80px;
     }
 
-    .profile h1, .profile p {
-        font-size: 1.2em; /* Adjust profile text for mobile */
+    .profile h1 {
+        font-size: 1.5em; /* Adjusted for mobile */
     }
 
     .biography p,
     .interests ul li,
     .education ul li,
     #publications ul li {
-        font-size: 1em; /* Slightly smaller for mobile readability */
+        font-size: 1em; /* Smaller for mobile readability */
     }
 }
