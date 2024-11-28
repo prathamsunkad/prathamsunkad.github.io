@@ -81,6 +81,7 @@ body {
     background-color: #f5f5f5;
     color: black;
     line-height: 1.6;
+    font-size: 1.2em; /* Slightly larger base font for content */
 }
 
 /* Header */
@@ -89,6 +90,7 @@ header {
     padding: 1em;
     background-color: #333;
     color: white;
+    font-size: 1.3em; /* Slightly larger header font */
 }
 
 /* Main Content */
@@ -101,40 +103,41 @@ main {
 /* Profile Section */
 .profile {
     text-align: center;
-    margin-bottom: 2em;
+    margin-bottom: 1.5em; /* Reduced spacing */
 }
 
 .profile img {
-    width: 30px;
-    height: 30px;
+    width: 30px; /* Keep smaller size */
+    height: 30px; /* Keep smaller size */
     border-radius: 50%;
-    margin-bottom: 1em;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0.5em; /* Reduced margin below image */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .profile h1, .profile p {
-    margin: 0.3em 0;
+    margin: 0.2em 0; /* Reduced spacing for compactness */
+    font-size: 1.4em; /* Slightly larger text to balance the smaller image */
 }
 
 /* Biography Section */
 .biography {
     text-align: center;
-    margin-bottom: 2em;
+    margin-bottom: 1.5em; /* Reduced spacing */
 }
 
 .biography h2 {
-    font-size: 1.5em;
+    font-size: 1.5em; /* Section heading font size */
     margin-bottom: 0.5em;
 }
 
 .biography p {
-    font-size: 1.2em;
+    font-size: 1.2em; /* Adjusted for readability */
     text-align: justify;
 }
 
 /* Interests Section */
 .interests {
-    margin-bottom: 2em;
+    margin-bottom: 1.5em; /* Reduced spacing */
     text-align: center;
 }
 
@@ -150,11 +153,12 @@ main {
 
 .interests ul li {
     margin: 0.5em 0;
+    font-size: 1.2em; /* Increased list item font size */
 }
 
 /* Education Section */
 .education {
-    margin-bottom: 2em;
+    margin-bottom: 1.5em; /* Reduced spacing */
     text-align: center;
 }
 
@@ -170,11 +174,12 @@ main {
 
 .education ul li {
     margin: 0.5em 0;
+    font-size: 1.2em; /* Balanced font size */
 }
 
 /* Publications Section */
 #publications {
-    margin-bottom: 2em;
+    margin-bottom: 1.5em; /* Reduced spacing */
     text-align: center;
     padding: 1em;
     background-color: white;
@@ -194,6 +199,7 @@ main {
 
 #publications ul li {
     margin: 1em 0;
+    font-size: 1.2em; /* Balanced size */
 }
 
 #publications ul li a {
@@ -212,11 +218,28 @@ footer {
     padding: 1em;
     background-color: #333;
     color: white;
+    font-size: 1.1em;
 }
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
     body {
         padding: 0 1em;
+    }
+
+    .profile img {
+        width: 25px; /* Even smaller on mobile */
+        height: 25px;
+    }
+
+    .profile h1, .profile p {
+        font-size: 1.2em; /* Adjust profile text for mobile */
+    }
+
+    .biography p,
+    .interests ul li,
+    .education ul li,
+    #publications ul li {
+        font-size: 1em; /* Slightly smaller for mobile readability */
     }
 }
