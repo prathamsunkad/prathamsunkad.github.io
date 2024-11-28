@@ -73,158 +73,150 @@ footer .social a:hover {
 }  */
 
 
-/* Main Content with Split Layout */
-main {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 7em 2em 2em; /* Clears the fixed header */
-    gap: 1em;
+/* General Reset */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: black;
+    line-height: 1.6;
 }
 
-/* Left Section */
-.left-side {
-    flex: 1;
-    max-width: 33%;
+/* Header */
+header {
     text-align: center;
     padding: 1em;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    background-color: #ffffff;
-    border-radius: 8px;
+    background-color: #333;
+    color: white;
 }
 
-.left-side img {
-    width: 80%;
-    height: auto;
-    max-width: 25px;
+/* Main Content */
+main {
+    width: 90%;
+    margin: 0 auto;
+    padding: 2em 0;
+}
+
+/* Profile Section */
+.profile {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.profile img {
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     margin-bottom: 1em;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.left-side h1 {
-    font-size: 1.6em;
-    margin-bottom: 0.5em;
-}
-
-.left-side p {
-    font-size: 1.2em;
+.profile h1, .profile p {
     margin: 0.3em 0;
-    color: #555;
 }
 
-/* Right Section */
-.right-side {
-    flex: 2;
-    max-width: 66%;
-    padding: 1em;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+/* Biography Section */
+.biography {
+    text-align: center;
+    margin-bottom: 2em;
 }
 
-/* Biography */
-.right-side .biography {
-    margin-bottom: 1em;
-}
-
-.right-side .biography h2 {
+.biography h2 {
     font-size: 1.5em;
-    color: #003366;
     margin-bottom: 0.5em;
 }
 
-.right-side .biography p {
-    font-size: 1.1em;
-    text-align: justify;
-    margin-bottom: 1em;
-}
-
-/* Interests and Education */
-.interests-education {
-    display: flex;
-    gap: 2%;
-    margin-bottom: 1em;
-}
-
-.interests, .education {
-    flex: 1;
-    padding: 1em;
-    background-color: #ffffff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-}
-
-.interests h3, .education h3 {
+.biography p {
     font-size: 1.2em;
-    color: #003366;
-    margin-bottom: 0.5em;
+    text-align: justify;
+}
+
+/* Interests Section */
+.interests {
+    margin-bottom: 2em;
     text-align: center;
 }
 
-.interests ul, .education ul {
+.interests h2 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.interests ul {
     list-style: none;
-    padding-left: 0;
-    font-size: 1em;
-    margin: 0;
+    padding: 0;
+}
+
+.interests ul li {
+    margin: 0.5em 0;
+}
+
+/* Education Section */
+.education {
+    margin-bottom: 2em;
     text-align: center;
+}
+
+.education h2 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.education ul {
+    list-style: none;
+    padding: 0;
+}
+
+.education ul li {
+    margin: 0.5em 0;
 }
 
 /* Publications Section */
 #publications {
-    width: 100%;
-    padding: 2em;
-    background-color: #e8f0f8;
-    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow-y: auto;
-    max-height: 400px; /* Adjust for scrollable content */
-    margin-top: 2em;
+    margin-bottom: 2em;
+    text-align: center;
+    padding: 1em;
+    background-color: white;
     border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 #publications h2 {
     font-size: 1.5em;
-    color: #003366;
-    margin-bottom: 1em;
-    text-align: center;
+    margin-bottom: 0.5em;
 }
 
 #publications ul {
     list-style: none;
-    padding-left: 0;
-    font-size: 1.1em;
+    padding: 0;
 }
 
 #publications ul li {
-    margin-bottom: 1em;
-    text-align: center;
+    margin: 1em 0;
 }
 
 #publications ul li a {
-    color: #003366;
-    font-weight: bold;
+    color: black;
     text-decoration: underline;
     transition: color 0.3s;
 }
 
 #publications ul li a:hover {
-    color: #ff6600;
+    color: gray;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #333;
+    color: white;
 }
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
-    main {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .left-side, .right-side {
-        max-width: 100%;
-        width: 100%;
-    }
-
-    .interests-education {
-        flex-direction: column;
-        gap: 1em;
+    body {
+        padding: 0 1em;
     }
 }
