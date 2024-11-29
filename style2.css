@@ -32,8 +32,8 @@ header h1 {
 }
 
 .profile img {
-    width: 10px;
-    height: 10px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 1rem;
@@ -189,4 +189,11 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .profile img {
+        width: 150px; /* Smaller for mobile */
+        height: 150px;
+    }
 }
