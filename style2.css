@@ -52,6 +52,17 @@ header h1 {
     color: #666;
 }
 
+.contact-icons a {
+    margin: 0 10px;
+    color: #333; /* Change to preferred color */
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.contact-icons a:hover {
+    color: #007bff; /* Hover effect color */
+}
+
 /* Media Query for Mobile Screens
 @media (max-width: 600px) {
     .profile img {
