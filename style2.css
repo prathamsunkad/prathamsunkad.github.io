@@ -32,8 +32,9 @@ header h1 {
 }
 
 .profile img {
-    width: 250px;
-    height: 250px;
+    width: 200px; /* Default size for larger screens */
+    height: 200px;
+    max-width: 100%;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 1rem;
@@ -49,6 +50,14 @@ header h1 {
     margin: 0.3rem 0;
     font-size: 1rem;
     color: #666;
+}
+
+/* Media Query for Mobile Screens */
+@media (max-width: 600px) {
+    .profile img {
+        width: 150px; /* Smaller size for mobile screens */
+        height: 150px;
+    }
 }
 
 /* Biography Section */
@@ -104,73 +113,6 @@ header h1 {
     margin-bottom: 0.5rem;
 }
 
-/* Education Section */
-.education {
-    width: 90%;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 1.5rem;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2rem;
-}
-
-.education h2 {
-    font-size: 1.5rem;
-    color: #333;
-    margin-bottom: 1rem;
-}
-
-.education ul {
-    list-style: none;
-    padding: 0;
-}
-
-.education ul li {
-    font-size: 1rem;
-    color: #555;
-    margin-bottom: 0.5rem;
-}
-
-/* Publications Section */
-#publications {
-    width: 90%;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 1.5rem;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2rem;
-}
-
-#publications h2 {
-    font-size: 1.5rem;
-    color: #333;
-    margin-bottom: 1rem;
-}
-
-#publications ul {
-    list-style: none;
-    padding: 0;
-}
-
-#publications ul li {
-    font-size: 1rem;
-    color: #555;
-    margin-bottom: 0.5rem;
-}
-
-#publications ul li a {
-    color: #0077cc;
-    text-decoration: none;
-}
-
-#publications ul li a:hover {
-    text-decoration: underline;
-}
-
 /* Footer */
 footer {
     text-align: center;
@@ -179,22 +121,4 @@ footer {
     border-top: 1px solid #ddd;
     font-size: 0.9rem;
     color: #666;
-}
-
-/* Links */
-a {
-    color: #0073e6;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* Media Query for Responsive Design */
-@media (max-width: 600px) {
-    .profile img {
-        width: 200px; /* Adjusted size for mobile */
-        height: 200px;
-    }
 }
