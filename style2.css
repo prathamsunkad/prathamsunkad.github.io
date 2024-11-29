@@ -52,13 +52,13 @@ header h1 {
     color: #666;
 }
 
-/* Media Query for Mobile Screens */
+/* Media Query for Mobile Screens
 @media (max-width: 600px) {
     .profile img {
         width: 150px; /* Smaller size for mobile screens */
-        height: 150px;
+        /* height: 150px;
     }
-}
+} */ 
 
 /* Biography Section */
 .biography {
